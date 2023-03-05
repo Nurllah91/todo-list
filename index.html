@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar bg-pink-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">My Todo-list</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+                    <input type="text" placeholder="Search" class="input input-bordered" />
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="https://picsum.photos/200/300" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="mx-4 md:mx-12">
+
+        <input id="todo-text" class="shadow-md border-2 w-[80%] mt-5 p-2 rounded" type="text">
+        <button id="add-btn" class="bg-blue-400 font-semibold text-white px-1 rounded-lg w-[18%] md:px-2 md:py-2">Add
+            items</button>
+
+        <table class="w-full mt-5 text-center">
+            <thead class="border-b-2">
+                <tr>
+                    <th>Number</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="content-container" class="mt-5">
+
+            </tbody>
+        </table>
+
+        <div class="w-[30%] text-center mx-auto">
+            <button id="clear-btn" class="btn btn-secondary mt-5">Clear All</button>
+        </div>
+
+
+    </main>
+
+
+
+
+
+
+
+    <script src="script/todo.js"></script>
+</body>
+
+</html>
